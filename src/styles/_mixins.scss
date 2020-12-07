@@ -1,0 +1,40 @@
+@mixin respond($breakpoint) {
+  @if $breakpoint == phonex {
+    @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
+      @content;
+    }
+  }
+
+  //  768px 1024px
+  @if $breakpoint == tab-port {
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+      @content;
+    }
+  }
+
+  //desktop queries
+
+  //med 67.5em
+  @if $breakpoint == med-desktop {
+    @media (max-width: 65.5em) {
+      @content;
+    }
+  }
+  @if $breakpoint == sm-desktop {
+    @media (max-width: 56.68em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == xs-desktop {
+    @media (max-width: 46.87em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == big-desktop {
+    @media (min-width: 112.5em) {
+      @content;
+    }
+  }
+}
