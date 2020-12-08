@@ -183,9 +183,9 @@ const Highlights = () => {
               </div>
             </div>
           </div>
-          {cardData.map((card) => (
-            <div className="col d-flex flex-wrap justify-content-center pt-3 highlights_cardContainer">
-              <div className="card">
+          <div className="d-flex flex-column flex-md-row justify-content-center pt-3 highlights_cardContainer">
+            {cardData.map((card) => (
+              <div className="card m-1" style={{ width: "100%" }}>
                 <img
                   src={card.image}
                   className="card-img-top highlights_card_img"
@@ -202,8 +202,8 @@ const Highlights = () => {
                   </a>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
     </div>
